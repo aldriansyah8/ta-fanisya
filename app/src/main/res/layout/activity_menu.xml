@@ -25,7 +25,7 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Es Coklat"
+        android:text="Es Cappucino"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,36 +36,36 @@
         app:layout_constraintVertical_bias="0.431" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/cappMin_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="216dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintBottom_toBottomOf="@+id/cappucino_tv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/cappucino_tv"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_remove_circle_outline_24" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/cappucino_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="0"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/cappAdd_btn"
+        app:layout_constraintStart_toEndOf="@+id/cappMin_btn"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/cappAdd_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="72dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintBottom_toBottomOf="@+id/cappucino_tv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/cappucino_tv"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
 
@@ -73,7 +73,7 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Es Coklat"
+        android:text="Es Kopisusu"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -84,65 +84,65 @@
         app:layout_constraintVertical_bias="0.702" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/kopisusu_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="0"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintEnd_toStartOf="@+id/kopisusuAdd_btn"
+        app:layout_constraintStart_toEndOf="@+id/kopisusuMin_btn"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/kopisusuMin_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textView11"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/textView11"
+        app:layout_constraintBottom_toBottomOf="@+id/kopisusu_tv"
+        app:layout_constraintStart_toStartOf="@+id/cappMin_btn"
+        app:layout_constraintTop_toTopOf="@+id/kopisusu_tv"
         app:srcCompat="@drawable/ic_baseline_remove_circle_outline_24" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/kopisusuAdd_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textView11"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/textView11"
+        app:layout_constraintBottom_toBottomOf="@+id/kopisusu_tv"
+        app:layout_constraintEnd_toEndOf="@+id/cappAdd_btn"
+        app:layout_constraintTop_toTopOf="@+id/kopisusu_tv"
         app:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/coklatAdd_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/textView7"
+        app:layout_constraintBottom_toBottomOf="@+id/coklat_tv"
+        app:layout_constraintEnd_toEndOf="@+id/cappAdd_btn"
+        app:layout_constraintTop_toTopOf="@+id/coklat_tv"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/coklat_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="0"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/coklatAdd_btn"
         app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/coklatMin_btn"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/coklatMin_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/textView7"
+        app:layout_constraintBottom_toBottomOf="@+id/coklat_tv"
+        app:layout_constraintStart_toStartOf="@+id/cappMin_btn"
+        app:layout_constraintTop_toTopOf="@+id/coklat_tv"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_remove_circle_outline_24" />
 
@@ -165,6 +165,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="48dp"
+        android:backgroundTint="#000000"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="@+id/btnNext"
         app:layout_constraintEnd_toStartOf="@+id/btnNext"
@@ -178,8 +179,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="72dp"
+        android:backgroundTint="@color/white"
         android:text="Next"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/kopisusu_tv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

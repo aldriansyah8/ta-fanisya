@@ -1,9 +1,10 @@
 package com.example.ta_fanisya;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static com.example.ta_fanisya.LoginActivity.usernm;
+
 import android.content.Intent;
+import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,19 +15,21 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-/* import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth; */
-import android.os.Bundle;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    private EditText emailTextView, passwordTextView, pwsCheck;
+    private EditText emailTextView, passwordTextView, pwsCheck, regisTV;
     private TextView logintxt;
     private Button Btn;
     private ProgressBar progressbar;
-    //private FirebaseAuth mAuth;
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +37,7 @@ public class RegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
 
         // taking FirebaseAuth instance
-        // mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         // initialising all views through id defined above
         emailTextView = findViewById(R.id.regis_email);
@@ -43,6 +46,8 @@ public class RegistrationActivity extends AppCompatActivity {
         progressbar = findViewById(R.id.progressbar);
         logintxt = findViewById(R.id.txtLogin);
         pwsCheck = findViewById(R.id.passwd);
+        regisTV = findViewById(R.id.regis_name);
+
 
         logintxt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +62,7 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                // Write a message to the database
                 registerNewUser();
             }
         });
@@ -72,6 +78,15 @@ public class RegistrationActivity extends AppCompatActivity {
         String email, password;
         email = emailTextView.getText().toString();
         password = passwordTextView.getText().toString();
+
+        usernm = regisTV.getText().toString();
+        String newuser = email.substring(0,5);
+        int saldo = 100000;
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("user").child(newuser).child("name");
+        myRef.setValue(usernm);
+        myRef = database.getReference("user").child(newuser).child("saldo");
+        myRef.setValue(saldo);
 
         // Validations for input email and password
         if (TextUtils.isEmpty(email)) {
@@ -90,7 +105,7 @@ public class RegistrationActivity extends AppCompatActivity {
         }
 
         // create new user or register new user
-        /* mAuth
+         mAuth
                 .createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
@@ -126,6 +141,6 @@ public class RegistrationActivity extends AppCompatActivity {
                             progressbar.setVisibility(View.GONE);
                         }
                     }
-                }); */
+                });
     }
 }

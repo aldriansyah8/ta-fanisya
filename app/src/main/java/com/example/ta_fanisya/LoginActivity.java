@@ -13,12 +13,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/* import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase; */
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -26,8 +29,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText emailTextView, passwordTextView;
     private Button Btn;
     private ProgressBar progressBar;
-   // private FirebaseAuth mAuth;
-    protected static String usertext;
+    private FirebaseAuth mAuth;
+    protected static String usernm, newuser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         // taking instance of FirebaseAuth
-        // mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         // initialising all views through id defined above
         emailTextView = findViewById(R.id.email);
@@ -49,8 +52,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(i);
+                // Write a message to the database
+                loginUserAccount();
             }
         });
 
@@ -73,6 +76,7 @@ public class LoginActivity extends AppCompatActivity {
         String email, password;
         email = emailTextView.getText().toString();
         password = passwordTextView.getText().toString();
+        newuser = email.substring(0,5);
 
         // validations for input email and password
         if (TextUtils.isEmpty(email)) {
@@ -92,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         // signin existing user
-        /* mAuth.signInWithEmailAndPassword(email, password)
+         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(
                         new OnCompleteListener<AuthResult>() {
                             @Override
@@ -110,9 +114,11 @@ public class LoginActivity extends AppCompatActivity {
 
                                     // if sign-in is successful
                                     // intent to home activity
+
+
                                     Intent intent
                                             = new Intent(LoginActivity.this,
-                                            HomepagePembeli.class);
+                                            MainActivity.class);
                                     startActivity(intent);
 
                                 }
@@ -129,7 +135,7 @@ public class LoginActivity extends AppCompatActivity {
                                     progressBar.setVisibility(View.GONE);
                                 }
                             }
-                        }); */
+                        });
     }
 
 }

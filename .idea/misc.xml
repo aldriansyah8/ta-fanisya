@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/berli/AndroidStudioProjects/ta-fanisya/app/src/main/res/layout/activity_empty_stock.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/berli/AndroidStudioProjects/ta-fanisya/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/berli/AndroidStudioProjects/ta-fanisya/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/berli/AndroidStudioProjects/ta-fanisya/app/src/main/res/layout/activity_menu.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/berli/AndroidStudioProjects/ta-fanisya/app/src/main/res/layout/activity_notif_proses.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/berli/AndroidStudioProjects/ta-fanisya/app/src/main/res/layout/activity_order.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/berli/AndroidStudioProjects/ta-fanisya/app/src/main/res/layout/activity_recap.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/berli/AndroidStudioProjects/ta-fanisya/app/src/main/res/layout/activity_registration.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/berli/AndroidStudioProjects/ta-fanisya/app/src/main/res/layout/activity_splash_screen.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/berli/AndroidStudioProjects/ta-fanisya/app/src/main/res/layout/activity_wait_screen.xml" value="0.358695652173913" />
         <entry key="..\:/Users/saddam.aldriansyah/AndroidStudioProjects/tafanisya/app/src/main/res/layout/activity_empty_stock.xml" value="0.19021739130434784" />
         <entry key="..\:/Users/saddam.aldriansyah/AndroidStudioProjects/tafanisya/app/src/main/res/layout/activity_login.xml" value="0.19021739130434784" />
         <entry key="..\:/Users/saddam.aldriansyah/AndroidStudioProjects/tafanisya/app/src/main/res/layout/activity_main.xml" value="0.4" />

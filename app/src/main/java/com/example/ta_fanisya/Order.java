@@ -22,7 +22,7 @@ public class Order extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent i = new Intent(Order.this, NotifProses.class);
+                Intent i = new Intent(Order.this, MainActivity.class);
                 startActivity(i);
             }
         });
